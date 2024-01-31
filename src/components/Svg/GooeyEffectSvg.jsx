@@ -14,7 +14,10 @@ class GooeyEffectSvg extends Component {
             <feColorMatrix
               in="blur"
               mode="matrix"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -9"
+              values="1 0 0 0 0
+                      0 1 0 0 0
+                      0 0 1 0 0
+                      0 0 0 20 -9"
               result="gooey-effect"
             />
             <feComposite

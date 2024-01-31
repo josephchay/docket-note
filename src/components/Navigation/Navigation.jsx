@@ -18,6 +18,8 @@ class Navigation extends Component {
       { order: "third", isSubsequent: true, dataFrom: "160", dataTo: "200" },
       { order: "fourth", isSubsequent: true, dataFrom: "220", dataTo: "260" },
       { order: "fifth", isSubsequent: true, dataFrom: "280", dataTo: "320" },
+      { order: "sixth", isSubsequent: true, dataFrom: "340", dataTo: "380" },
+      { order: "seventh", isSubsequent: true, dataFrom: "400", dataTo: "440" },
     ];
 
     this.navActivator = createRef();
@@ -37,10 +39,10 @@ class Navigation extends Component {
     this.disableActivator();
     tl.add({
       targets: this.navActivator.current,
-      translateY: [0, -12, 0],
+      translateY: [0, -14, 0],
       scale: [1, .8, 1],
       rotate: 316,
-      duration: 600,
+      duration: 800,
       easing: 'easeInOutSine',
     }).add({
       targets: '.color-selectors .first',
