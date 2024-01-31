@@ -17,15 +17,15 @@
   font-size: 18px;
 }
 
-.nav .notes-container {
+.nav .activator-container {
   filter: url(#gooey-effect);
 }
 
-.nav .notes-container .add-button {
+.nav .activator-container .activator {
   margin-top: 48px;
 }
 
-.nav .notes-container .add-button button {
+.nav .activator-container .activator button {
   z-index: 21;
   border-radius: 100%;
   background: #000;
@@ -40,12 +40,12 @@
   justify-content: center;
 }
 
-.nav .notes-container .add-button button img {
+.nav .activator-container .activator button img {
   width: 24px;
   height: 24px;
 }
 
-.nav .notes-container .note-selectors {
+.nav .activator-container .color-selectors {
   display: flex;
   justify-content: center;
   position: relative;
@@ -53,38 +53,38 @@
   margin-top: -24px;
 }
 
-.nav .notes-container .note-selectors .selector {
+.nav .activator-container .color-selectors .selector {
+  position: absolute;
   height: 32px;
   width: 32px;
   margin: 0 auto;
-  border-radius: 100%;
-  position: absolute;
   top: -20px;
+  border-radius: 100%;
   opacity: 0;
 }
 
-.nav .notes-container .note-selectors .selector.first {
+.nav .activator-container .color-selectors .selector.first {
   background: var(--yellow-color);
   z-index: 10;
   opacity: 1;
 }
 
-.nav .notes-container .note-selectors .selector.second {
+.nav .activator-container .color-selectors .selector.second {
   z-index: 9;
   background: var(--orange-color);
 }
 
-.nav .notes-container .note-selectors .selector.third {
+.nav .activator-container .color-selectors .selector.third {
   z-index: 8;
   background: var(--purple-color);
 }
 
-.nav .notes-container .note-selectors .selector.fourth {
+.nav .activator-container .color-selectors .selector.fourth {
   z-index: 7;
   background: var(--blue-color);
 }
 
-.nav .notes-container .note-selectors .selector.fifth {
+.nav .activator-container .color-selectors .selector.fifth {
   z-index: 6;
   background: var(--green-color);
 }
