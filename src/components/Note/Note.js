@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FaPen } from "react-icons/fa6";
+import { FaPen, FaStar } from "react-icons/fa6";
 
 import {
   NOTE_COLORS,
@@ -25,15 +25,20 @@ class Note extends Component {
   render() {
     return (
       <div className={ `note ${ NOTE_COLORS_NAMES[this.props.note.color] }` }>
-      <textarea
-        className="custom-scroll"
-        placeholder={ this.props.note.placeholder }
-      ></textarea>
+        <div className="header">
+          <div className="star">
+            <FaStar className="star-icon" style={{ color: this.props.note.color }} />
+          </div>
+        </div>
+        <textarea
+          className="custom-scroll"
+          placeholder={ this.props.note.placeholder }
+        ></textarea>
         <div className="footer">
           <div className="date">
-          <span
-            className={ `note-date highlight-${ NOTE_COLORS_NAMES[this.props.note.color] }` }>{ this.props.note.time }
-          </span>
+            <span
+              className={ `note-date highlight-${ NOTE_COLORS_NAMES[this.props.note.color] }` }>{ this.props.note.time }
+            </span>
           </div>
           <div className="edit">
             <FaPen className="edit-icon"/>

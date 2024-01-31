@@ -7,8 +7,8 @@ export const COLORS = {
   green: "#e6ee96",
   blue: "#55cffa",
   purple: "#b095f6",
-  pink: "#f6b0d5",
-  red: "#f6b0b0",
+  pink: "#f6a1d3",
+  red: "#f4a3a3",
 };
 
 export const COLORS_NAMES = Object.fromEntries(
@@ -21,8 +21,8 @@ export const NOTE_COLORS = {
   green: "#e6ee96",
   blue: "#55cffa",
   purple: "#b095f6",
-  pink: "#f6b0d5",
-  red: "#f6b0b0",
+  pink: "#f6a1d3",
+  red: "#f4a3a3",
 }
 
 export const NOTE_COLORS_NAMES = Object.fromEntries(
