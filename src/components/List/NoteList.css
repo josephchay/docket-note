@@ -1,0 +1,17 @@
+main {
+  grid-area: main;
+}
+
+main .header h2 {
+  font-size: 54px;
+  margin: 70px 0 0;
+  line-height: 1;
+}
+
+main .notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  margin-top: 80px;
+  padding: 0 70px;
+}

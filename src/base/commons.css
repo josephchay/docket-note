@@ -1,0 +1,62 @@
+.yellow {
+  color: var(--yellow-color);
+}
+
+.orange {
+  color: var(--orange-color);
+}
+
+.green {
+  color: var(--green-color);
+}
+
+.blue {
+  color: var(--blue-color);
+}
+
+.purple {
+  color: var(--purple-color);
+}
+
+.pink {
+  color: var(--pink-color);
+}
+
+.red {
+  color: var(--red-color);
+}
+
+.highlight-yellow::selection {
+  background-color: var(--black-color);
+  color: var(--yellow-color);
+}
+
+.highlight-orange::selection {
+  background-color: var(--black-color);
+  color: var(--orange-color);
+}
+
+.highlight-green::selection {
+  background-color: var(--black-color);
+  color: var(--green-color);
+}
+
+.highlight-blue::selection {
+  background-color: var(--black-color);
+  color: var(--blue-color);
+}
+
+.highlight-purple::selection {
+  background-color: var(--black-color);
+  color: var(--purple-color);
+}
+
+.highlight-pink::selection {
+  background-color: var(--black-color);
+  color: var(--pink-color);
+}
+
+.highlight-red::selection {
+  background-color: var(--black-color);
+  color: var(--red-color);
+}

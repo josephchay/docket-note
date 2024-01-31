@@ -1,0 +1,91 @@
+.nav {
+  position: fixed;
+  grid-area: nav;
+  border-right: 1px solid #ececec;
+  height: 100vh;
+  width: 128px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav .logo {
+  height: 80px;
+}
+
+.nav .logo h4 {
+  font-size: 18px;
+}
+
+.nav .notes-container {
+  filter: url(#gooey-effect);
+}
+
+.nav .notes-container .add-button {
+  margin-top: 48px;
+}
+
+.nav .notes-container .add-button button {
+  z-index: 21;
+  border-radius: 100%;
+  background: #000;
+  border: none;
+  height: 50px;
+  width: 50px;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav .notes-container .add-button button img {
+  width: 24px;
+  height: 24px;
+}
+
+.nav .notes-container .note-selectors {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  margin-top: -24px;
+}
+
+.nav .notes-container .note-selectors .selector {
+  height: 32px;
+  width: 32px;
+  margin: 0 auto;
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  opacity: 0;
+}
+
+.nav .notes-container .note-selectors .selector.first {
+  background: var(--yellow-color);
+  z-index: 10;
+  opacity: 1;
+}
+
+.nav .notes-container .note-selectors .selector.second {
+  z-index: 9;
+  background: var(--orange-color);
+}
+
+.nav .notes-container .note-selectors .selector.third {
+  z-index: 8;
+  background: var(--purple-color);
+}
+
+.nav .notes-container .note-selectors .selector.fourth {
+  z-index: 7;
+  background: var(--blue-color);
+}
+
+.nav .notes-container .note-selectors .selector.fifth {
+  z-index: 6;
+  background: var(--green-color);
+}
+
