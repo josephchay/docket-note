@@ -1,62 +1,90 @@
 .yellow {
-  color: var(--yellow-color);
+  color: var(--yellow-color) !important;
 }
 
 .orange {
-  color: var(--orange-color);
+  color: var(--orange-color) !important;
 }
 
 .green {
-  color: var(--green-color);
+  color: var(--green-color) !important;
 }
 
 .blue {
-  color: var(--blue-color);
+  color: var(--blue-color) !important;
 }
 
 .purple {
-  color: var(--purple-color);
+  color: var(--purple-color) !important;
 }
 
 .pink {
-  color: var(--pink-color);
+  color: var(--pink-color) !important;
 }
 
 .red {
-  color: var(--red-color);
+  color: var(--red-color) !important;
 }
 
-.highlight-yellow::selection {
-  background-color: var(--black-color);
-  color: var(--yellow-color);
+.yellow-bg {
+  background-color: var(--yellow-color) !important;
 }
 
-.highlight-orange::selection {
-  background-color: var(--black-color);
-  color: var(--orange-color);
+.orange-bg {
+  background-color: var(--orange-color) !important;
 }
 
-.highlight-green::selection {
-  background-color: var(--black-color);
-  color: var(--green-color);
+.green-bg {
+  background-color: var(--green-color) !important;
 }
 
-.highlight-blue::selection {
-  background-color: var(--black-color);
-  color: var(--blue-color);
+.blue-bg {
+  background-color: var(--blue-color) !important;
 }
 
-.highlight-purple::selection {
-  background-color: var(--black-color);
-  color: var(--purple-color);
+.purple-bg {
+  background-color: var(--purple-color) !important;
 }
 
-.highlight-pink::selection {
-  background-color: var(--black-color);
-  color: var(--pink-color);
+.pink-bg {
+  background-color: var(--pink-color) !important;
 }
 
-.highlight-red::selection {
-  background-color: var(--black-color);
-  color: var(--red-color);
+.red-bg {
+  background-color: var(--red-color) !important;
+}
+
+.yellow-highlight::selection {
+  background-color: var(--black-color) !important;
+  color: var(--yellow-color) !important;
+}
+
+.orange-highlight::selection {
+  background-color: var(--black-color) !important;
+  color: var(--orange-color) !important;
+}
+
+.green-highlight::selection {
+  background-color: var(--black-color) !important;
+  color: var(--green-color) !important;
+}
+
+.blue-highlight::selection {
+  background-color: var(--black-color) !important;
+  color: var(--blue-color) !important;
+}
+
+.purple-highlight::selection {
+  background-color: var(--black-color) !important;
+  color: var(--purple-color) !important;
+}
+
+.pink-highlight::selection {
+  background-color: var(--black-color) !important;
+  color: var(--pink-color) !important;
+}
+
+.red-highlight::selection {
+  background-color: var(--black-color) !important;
+  color: var(--red-color) !important;
 }

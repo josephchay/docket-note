@@ -14,7 +14,7 @@
 }
 
 .nav .logo h4 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .nav .activator-container {
@@ -41,8 +41,8 @@
 }
 
 .nav .activator-container .activator button img {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
 }
 
 .nav .activator-container .color-selectors {
@@ -61,41 +61,34 @@
   top: -20px;
   border-radius: 100%;
   opacity: 0;
+  cursor: pointer;
 }
 
 .nav .activator-container .color-selectors .selector.first {
-  background: var(--yellow-color);
   z-index: 10;
   opacity: 1;
 }
 
 .nav .activator-container .color-selectors .selector.second {
   z-index: 9;
-  background: var(--orange-color);
 }
 
 .nav .activator-container .color-selectors .selector.third {
   z-index: 8;
-  background: var(--green-color);
 }
 
 .nav .activator-container .color-selectors .selector.fourth {
   z-index: 7;
-  background: var(--blue-color);
 }
 
 .nav .activator-container .color-selectors .selector.fifth {
   z-index: 6;
-  background: var(--purple-color);
 }
 
 .nav .activator-container .color-selectors .selector.sixth {
   z-index: 5;
-  background: var(--pink-color);
 }
 
 .nav .activator-container .color-selectors .selector.seventh {
   z-index: 4;
-  background: var(--red-color);
 }
-

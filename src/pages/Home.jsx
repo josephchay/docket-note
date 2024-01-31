@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 
 import { id } from "../utils/math";
-import { getFormattedCurrentDate } from "../utils/date";
+import { formattedDateNow } from "../utils/date";
 import Navigation from "../components/Navigation/Navigation";
 import GooeyEffectSvg from "../components/Svg/GooeyEffectSvg";
 import Header from "../components/Header/Header";
-import NoteContainer from "../components/List/NoteList";
+import NoteList from "../components/List/NoteList";
 
 import "./Home.css";
 
 const Home = () => {
   const [notes, setNotes] = useState(() => {
-    return JSON.parse(localStorage.getItem('QuikQuill')) || [];
+    return JSON.parse(localStorage.getItem('DocketNoteProject')) || [];
   });
 
   const addNote = (color) => {
@@ -21,7 +21,7 @@ const Home = () => {
       id: id(),
       text: "",
       placeholder: "Docket this note...",
-      time: getFormattedCurrentDate(),
+      time: formattedDateNow(),
       color,
     });
 
@@ -41,16 +41,18 @@ const Home = () => {
   }
 
   useEffect(() => {
-    localStorage.setItem("QuikQuill", JSON.stringify(notes));
+    localStorage.setItem("DocketNoteProject", JSON.stringify(notes));
   }, [notes]);
 
   return (
     <div className="home custom-scroll">
-      <Navigation />
+      <Navigation
+        addNote={ addNote }
+      />
       <GooeyEffectSvg />
       <Header />
-      <NoteContainer
-        notes={notes}
+      <NoteList
+        notes={ notes }
         deleteNote={ deleteNote }
         updateText={ updateText }
       />

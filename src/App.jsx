@@ -1,5 +1,5 @@
 import "./constants/colors.css";
-import "./base/commons.css";
+import "../src/base/commons.css";
 
 import Home from "./pages/Home";
 

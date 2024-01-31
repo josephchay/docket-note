@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 
 class ColorSelector extends Component {
   render() {
-    const { className, dataFrom, dataTo } = this.props;
+    const { className, color, dataFrom, dataTo, addNote } = this.props;
 
     return (
       <div
         className={ className }
         data-from={ dataFrom }
         data-to={ dataTo }
+        onClick={ () => addNote(color) }
       ></div>
     );
   }

@@ -5,7 +5,6 @@
   height: 350px;
   width: 340px;
   border-radius: 24px;
-  background: #ffcf7d;
 }
 
 .note .header,
@@ -37,12 +36,12 @@
 }
 
 .note .header .star {
-  height: 36px;
-  width: 36px;
+  height: 34px;
+  width: 34px;
 }
 
 .note .header .star .star-icon {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .note textarea {
@@ -54,7 +53,7 @@
   padding-right: 10px;
   outline: none;
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   resize: none;
   width: 98%;
   height: 72%;
@@ -75,11 +74,11 @@
 }
 
 .note .footer .edit {
-  height: 44px;
-  width: 44px;
+  height: 40px;
+  width: 40px;
 }
 
 .note .footer .edit .edit-icon {
   color: var(--white-color);
-  font-size: 14px;
+  font-size: 12px;
 }

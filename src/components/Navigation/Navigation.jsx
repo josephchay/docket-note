@@ -13,13 +13,13 @@ class Navigation extends Component {
     super(props);
 
     this.colorSelectors = [
-      { order: "first", isSubsequent: false, dataFrom: "0", dataTo: "80" },
-      { order: "second", isSubsequent: true, dataFrom: "100", dataTo: "140" },
-      { order: "third", isSubsequent: true, dataFrom: "160", dataTo: "200" },
-      { order: "fourth", isSubsequent: true, dataFrom: "220", dataTo: "260" },
-      { order: "fifth", isSubsequent: true, dataFrom: "280", dataTo: "320" },
-      { order: "sixth", isSubsequent: true, dataFrom: "340", dataTo: "380" },
-      { order: "seventh", isSubsequent: true, dataFrom: "400", dataTo: "440" },
+      { order: "first", color: "yellow", isSubsequent: false, dataFrom: "0", dataTo: "80" },
+      { order: "second", color: "orange", isSubsequent: true, dataFrom: "100", dataTo: "140" },
+      { order: "third", color: "green", isSubsequent: true, dataFrom: "160", dataTo: "200" },
+      { order: "fourth", color: "blue", isSubsequent: true, dataFrom: "220", dataTo: "260" },
+      { order: "fifth", color: "purple", isSubsequent: true, dataFrom: "280", dataTo: "320" },
+      { order: "sixth", color: "pink", isSubsequent: true, dataFrom: "340", dataTo: "380" },
+      { order: "seventh", color: "red", isSubsequent: true, dataFrom: "400", dataTo: "440" },
     ];
 
     this.navActivator = createRef();
@@ -45,11 +45,11 @@ class Navigation extends Component {
       duration: 800,
       easing: 'easeInOutSine',
     }).add({
-      targets: '.color-selectors .first',
-      translateY: [0, 80],
-      duration: 3200,
-      scaleY: [1.8, 1],
-    }, '-=400'
+        targets: '.color-selectors .first',
+        translateY: [0, 80],
+        duration: 3200,
+        scaleY: [1.8, 1],
+      }, '-=400'
     ).add({
       targets: '.color-selectors .subsequent',
       translateY: (el) => {
@@ -128,9 +128,11 @@ class Navigation extends Component {
               this.colorSelectors.map((selector, index) => (
                 <ColorSelector
                   key={ index }
-                  className={`selector ${ selector.order } ${ selector.isSubsequent ? 'subsequent' : '' }`}
+                  className={`selector ${ selector.order } ${ selector.isSubsequent ? 'subsequent' : '' } ${ selector.color }-bg`}
+                  color={ selector.color }
                   dataFrom={ selector.dataFrom }
                   dataTo={ selector.dataTo }
+                  addNote={ this.props.addNote }
                 />
               ))
             }

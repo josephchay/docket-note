@@ -23,15 +23,22 @@ class NoteList extends Component {
         </div>
         <div className="notes">
           {
-            notes.map((item) => (
-              <Note
-                key={ item.id }
-                note={ item }
-                placeholder={ item.placeholder }
-                deleteNote={ this.props.deleteNote }
-                updateText={ this.props.updateText }
-              />
-            ))
+            notes?.length > 0 ? (
+              notes.map((item) => (
+                <Note
+                  key={ item.id }
+                  note={ item }
+                  placeholder={ item.placeholder }
+                  deleteNote={ this.props.deleteNote }
+                  updateText={ this.props.updateText }
+                />
+              ))
+            ) : (
+              <div className="empty-state">
+                <h3>No notes found</h3>
+                <p>Click on the <strong>+</strong> icon to add a note</p>
+              </div>
+            )
           }
         </div>
       </main>
