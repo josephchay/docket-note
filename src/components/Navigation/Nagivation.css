@@ -26,21 +26,21 @@
 }
 
 .nav .activator-container .activator button {
-  z-index: 21;
-  border-radius: 100%;
-  background: #000;
-  border: none;
-  height: 58px;
-  width: 58px;
-  outline: none;
   position: relative;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  width: 58px;
+  height: 58px;
+  background: #000;
+  z-index: 21;
 }
 
 .nav .activator-container .activator button img {
+  position: relative;
   width: 30px;
   height: 30px;
 }
@@ -61,7 +61,6 @@
   top: -20px;
   border-radius: 100%;
   opacity: 0;
-  cursor: pointer;
 }
 
 .nav .activator-container .color-selectors .selector.first {
