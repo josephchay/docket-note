@@ -3,10 +3,7 @@
   --black-transclucent-color: rgba(25, 25, 25, 0.6);
   --black-more-transclucent-color: rgba(25, 25, 25, 0.4);
   --black-even-more-transclucent-color: rgba(25, 25, 25, 0.2);
-  --gray-color: #a1a7b6;
-  --gray-transclucent-color: rgba(161, 167, 182, 0.6);
-  --light-gray-color: #d2d9ea;
-  --light-gray-transclucent-color: rgba(210, 217, 234, 0.6);
+  --gray-color: #5f5f5f;
   --white-color: #fffeff;
   --white-transclucent-color: rgba(255, 254, 255, 0.6);
   --yellow-color: #ffd56b;

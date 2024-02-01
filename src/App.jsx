@@ -6,7 +6,7 @@ import CursorBall from "./components/Cursor/CursorBall";
 
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Home />
