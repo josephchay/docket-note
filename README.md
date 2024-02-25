@@ -10,4 +10,4 @@ Effortlessly organize your notes, set reminders, and access your snippets anytim
 **Docket** - where note-taking meets speed and simplicity, making every thought a quick, memorable note!
 
 # Acknowledgements
-- UI inspired from [Docket note](https://dribbble.com/shots/14037848-Docket-note-Side-menu)
+- Design inspired from [Docket note](https://dribbble.com/shots/14037848-Docket-note-Side-menu){:target="_blank"}

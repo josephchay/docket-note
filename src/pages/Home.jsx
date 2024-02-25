@@ -49,7 +49,9 @@ const Home = () => {
       <Navigation
         addNote={ addNote }
       />
-      <GooeyEffectSvg />
+      <GooeyEffectSvg
+        id="colorSelectors"
+      />
       <Header />
       <NoteList
         notes={ notes }
