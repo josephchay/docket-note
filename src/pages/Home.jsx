@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 
 import { id } from "../utils/math";
 import { formattedDateNow } from "../utils/date";
+import { randomQuote } from "../utils/data";
 import Navigation from "../components/Navigation/Navigation";
 import GooeyEffectSvg from "../components/Svg/GooeyEffectSvg";
 import Header from "../components/Header/Header";
 import NoteList from "../components/List/NoteList";
+
+import quotes from "../assets/data/quotes.json";
 
 import "./Home.css";
 
@@ -27,7 +30,7 @@ const Home = () => {
     newNotes.push({
       id: id(),
       text: "",
-      placeholder: "Docket this note...",
+      placeholder: randomQuote(quotes),
       time: formattedDateNow(),
       color,
       favorite: false,
