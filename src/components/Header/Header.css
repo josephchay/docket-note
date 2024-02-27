@@ -9,6 +9,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 6px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+  padding: 6px 10px;
 }
 
 .header .search .icon {
@@ -24,6 +28,7 @@
 }
 
 .header .search input {
+  background-color: transparent;
   height: 32px;
   border: none;
   outline: none;
@@ -32,4 +37,19 @@
 
 .header .search input::placeholder {
   color: #a1a7b6;
+}
+
+.header .search .star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  border-radius: 8px;
+  height: 32px;
+  width: 32px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.header .search .star .star-icon {
+  color: rgb(240, 240, 240);
 }

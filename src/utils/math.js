@@ -1,7 +1,7 @@
-import { now } from "./date";
+import { v4 as uuidv4 } from 'uuid';
 
 export const id = () => {
-  return now() + "" + Math.floor(Math.random() * 80);
+  return uuidv4();
 }
 
 export const itemsPerFlexRow = (ref) => {

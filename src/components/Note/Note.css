@@ -4,7 +4,9 @@
   padding: 24px;
   height: 350px;
   width: 340px;
-  border-radius: 24px;
+  border: none;
+  outline: none;
+  transition: border-radius 0.3s ease-in-out;
 }
 
 .note .header,
@@ -31,6 +33,10 @@
   border-radius: 100%;
   border: none;
   outline: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.note .footer .edit {
   background: var(--black-color);
 }
 
@@ -56,6 +62,7 @@
   resize: none;
   width: 98%;
   height: 72%;
+  transition: color 0.3s ease-in-out;
 }
 
 .note textarea::placeholder {
@@ -80,4 +87,22 @@
 .note .footer .edit .edit-icon {
   color: var(--white-color);
   font-size: 12px;
+}
+
+.note .trash-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.note .trash-container .trash .trash-icon {
+  font-size: 100px;
+  color: var(--black-color);
 }

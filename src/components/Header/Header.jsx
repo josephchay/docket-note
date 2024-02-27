@@ -3,8 +3,17 @@ import { motion } from 'framer-motion';
 import searchIcon from '../../assets/icons/search.svg';
 
 import './Header.css';
+import { FaStar } from "react-icons/fa6";
 
-const Header = () => {
+const Header = ({
+  setNotesSortText,
+  notesSortByFavorite,
+  setNotesSortByFavorite,
+}) => {
+  const handleSearch = (e) => {
+    setNotesSortText((e.target.value).toLowerCase());
+  }
+
   return (
     <motion.header
       initial={{
@@ -18,7 +27,7 @@ const Header = () => {
       transition={{
         duration: 0.8,
         type: "spring",
-        stiffness: 120,
+        stiffness: 100,
       }}
       className="header"
     >
@@ -26,7 +35,35 @@ const Header = () => {
         <div className="icon">
           <img src={ searchIcon } alt="Search Icon" />
         </div>
-        <input type="text" placeholder="Search" />
+        <input
+          type="text"
+          placeholder="Search"
+          onChange={ handleSearch }
+        />
+        <motion.div
+          whileHover={{
+            scale: 1.1
+          }}
+          whileTap={{
+            scale: 0.96
+          }}
+          transition={{
+            scale: {
+              type: "spring",
+              stiffness: 400,
+              damping: 17,
+            },
+          }}
+          onClick={ setNotesSortByFavorite }
+          style={{
+            backgroundColor: notesSortByFavorite ? "var(--black-color)" : "rgb(200, 200, 200)"
+          }}
+          className="star"
+        >
+          <FaStar
+            className="star-icon"
+          />
+        </motion.div>
       </div>
     </motion.header>
   );

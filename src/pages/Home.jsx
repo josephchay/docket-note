@@ -14,6 +14,13 @@ const Home = () => {
     return JSON.parse(localStorage.getItem('DocketNoteProject')) || [];
   });
 
+  const [notesSortText, setNotesSortText] = useState("");
+  const [notesSortByFavorite, setNotesSortByFavorite] = useState(false);
+
+  const toggleSortByFavorite = () => {
+    setNotesSortByFavorite(!notesSortByFavorite);
+  }
+
   const addNote = (color) => {
     const newNotes = [...notes];
 
@@ -23,6 +30,8 @@ const Home = () => {
       placeholder: "Docket this note...",
       time: formattedDateNow(),
       color,
+      favorite: false,
+      lock: false,
     });
 
     setNotes(newNotes);
@@ -40,6 +49,20 @@ const Home = () => {
     setNotes(newNotes);
   }
 
+  const updateFavourite = (id) => {
+    const newNotes = notes.map((note) =>
+      note.id === id ? { ...note, favorite: !note.favorite } : note
+    );
+    setNotes(newNotes);
+  }
+
+  const updateLock = (id) => {
+    const newNotes = notes.map((note) =>
+      note.id === id ? { ...note, lock: !note.lock } : note
+    );
+    setNotes(newNotes);
+  }
+
   useEffect(() => {
     localStorage.setItem("DocketNoteProject", JSON.stringify(notes));
   }, [notes]);
@@ -52,11 +75,19 @@ const Home = () => {
       <GooeyEffectSvg
         id="colorSelectors"
       />
-      <Header />
+      <Header
+        setNotesSortText={ setNotesSortText }
+        notesSortByFavorite={ notesSortByFavorite }
+        setNotesSortByFavorite={ toggleSortByFavorite }
+      />
       <NoteList
         notes={ notes }
         deleteNote={ deleteNote }
         updateText={ updateText }
+        updateFavourite={ updateFavourite }
+        updateLock={ updateLock }
+        sortText={ notesSortText }
+        sortFavorite={ notesSortByFavorite }
       />
     </div>
   );
