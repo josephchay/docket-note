@@ -146,7 +146,7 @@ class Navigation extends Component {
             transition={{
               duration: 0.8,
               type: "spring",
-              stiffness: 220,
+              stiffness: 240,
               delay: 0.3,
             }}
             className="activator"

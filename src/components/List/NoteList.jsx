@@ -18,7 +18,7 @@ const NoteList = ({
   const ref = useRef(null);
 
   const [numPerRow, setNumPerRow] = useState(0);
-  const [renderFirstRow, setRenderFirstRow] = useState(false);
+  const [renderFirstRow, setRenderFirstRow] = useState(false);  // To delay the rendering of the notes list group.
 
   const reverse = (arr) => {
     const reversed = [];
@@ -65,11 +65,11 @@ const NoteList = ({
   useEffect(() => {
     const delayTimer = setTimeout(() => {
       setRenderFirstRow(true);
-    }, 250);
+    }, 700);
 
     const delayTimerItemsPerRow = setTimeout(() => {
       setNumPerRow(itemsPerFlexRow(ref));
-    }, 300);
+    }, 750);
 
     return () => {
       clearTimeout(delayTimer);
@@ -111,7 +111,7 @@ const NoteList = ({
                   filteredNotes.map((item, index) => (
                     <Note
                       key={ item.id }
-                      delay={ .8 + ((index % numPerRow + 1) * 0.16) }
+                      delay={ (index % numPerRow + 1) * 0.16 }
                       note={ item }
                       deleteNote={ deleteNote }
                       updateText={ updateText }
