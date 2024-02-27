@@ -11,7 +11,7 @@ import "./Home.css";
 
 const Home = () => {
   const [notes, setNotes] = useState(() => {
-    return JSON.parse(localStorage.getItem('DocketNoteProject')) || [];
+    return JSON.parse(sessionStorage.getItem('DocketNoteProject')) || [];
   });
 
   const [notesSortText, setNotesSortText] = useState("");
@@ -64,7 +64,7 @@ const Home = () => {
   }
 
   useEffect(() => {
-    localStorage.setItem("DocketNoteProject", JSON.stringify(notes));
+    sessionStorage.setItem("DocketNoteProject", JSON.stringify(notes));
   }, [notes]);
 
   return (
