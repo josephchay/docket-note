@@ -1,12 +1,15 @@
 import React, { Component, createRef } from 'react';
+
+import { motion } from "framer-motion";
 import { interpret } from "xstate";
 import { toggleMachine } from "./NavigationState";
 import anime from "animejs";
+
 import plusIcon from "../../assets/icons/plus.svg";
 
 import ColorSelector from "./ColorSelector";
 
-import "./Nagivation.css"
+import "./Nagivation.css";
 
 class Navigation extends Component {
   constructor(props) {
@@ -110,11 +113,44 @@ class Navigation extends Component {
 
     return (
       <div className="nav">
-        <div className="logo">
+        <motion.div
+          initial={{
+            opacity: 0,
+            translateX: -140,
+            scale: 1.04,
+          }}
+          animate={{
+            opacity: 1,
+            translateX: 0,
+            scale: 1,
+          }}
+          transition={{
+            duration: 0.4,
+            type: "spring",
+            stiffness: 120,
+          }}
+          className="logo"
+        >
           <h4>Docket</h4>
-        </div>
-        <div className="activator-container">
-          <div className="activator">
+        </motion.div>
+        <div
+          className="activator-container"
+        >
+          <motion.div
+            initial={{
+              scale: 0,
+            }}
+            animate={{
+              scale: 1,
+            }}
+            transition={{
+              duration: 0.8,
+              type: "spring",
+              stiffness: 220,
+              delay: 0.3,
+            }}
+            className="activator"
+          >
             <button
               id="navActivator"
               ref={ this.navActivator }
@@ -122,8 +158,19 @@ class Navigation extends Component {
             >
               <img src={ plusIcon } alt="Plus Icon" />
             </button>
-          </div>
-          <div className="color-selectors">
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            transition={{
+              delay: 1.6,
+            }}
+            className="color-selectors"
+          >
             {
               this.colorSelectors.map((selector, index) => (
                 <ColorSelector
@@ -136,7 +183,7 @@ class Navigation extends Component {
                 />
               ))
             }
-          </div>
+          </motion.div>
         </div>
       </div>
     );

@@ -93,7 +93,7 @@ const NoteList = ({
             duration: 0.8,
             type: "spring",
             stiffness: 160,
-            delay: .2,
+            delay: .6,
           }}
         >
           Notes
@@ -111,7 +111,7 @@ const NoteList = ({
                   filteredNotes.map((item, index) => (
                     <Note
                       key={ item.id }
-                      delay={ (index % numPerRow + 1) * 0.16 }
+                      delay={ .8 + ((index % numPerRow + 1) * 0.16) }
                       note={ item }
                       deleteNote={ deleteNote }
                       updateText={ updateText }
@@ -139,7 +139,7 @@ const NoteList = ({
                     duration: 0.6,
                     type: "spring",
                     stiffness: 180,
-                    delay: 0.2,
+                    delay: 0.5,
                   }}
                 >
                   No notes found
@@ -158,7 +158,7 @@ const NoteList = ({
                     duration: 0.6,
                     type: "spring",
                     stiffness: 180,
-                    delay: 0.3,
+                    delay: 0.6,
                   }}
                 >
                   Click on the
@@ -173,7 +173,7 @@ const NoteList = ({
                       duration: 0.4,
                       type: "spring",
                       stiffness: 300,
-                      delay: .8,
+                      delay: 1,
                     }}
                   >
                     +

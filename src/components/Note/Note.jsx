@@ -140,7 +140,7 @@ const Note = ({
         transition={{
           duration: 0.6,
           type: "spring",
-          stiffness: 200,
+          stiffness: 220,
           delay: delay,
           scale: {
             type: "spring",

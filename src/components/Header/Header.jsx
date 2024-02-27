@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
+import { FaStar } from "react-icons/fa6";
 
 import searchIcon from '../../assets/icons/search.svg';
 
 import './Header.css';
-import { FaStar } from "react-icons/fa6";
 
 const Header = ({
   setNotesSortText,
@@ -28,6 +28,7 @@ const Header = ({
         duration: 0.8,
         type: "spring",
         stiffness: 100,
+        delay: .4,
       }}
       className="header"
     >
@@ -42,7 +43,7 @@ const Header = ({
         />
         <motion.div
           whileHover={{
-            scale: 1.1
+            scale: 1.14
           }}
           whileTap={{
             scale: 0.96

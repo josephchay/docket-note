@@ -45,8 +45,8 @@
   justify-content: center;
   margin-left: 8px;
   border-radius: 8px;
-  height: 32px;
-  width: 32px;
+  height: 28px;
+  width: 28px;
   transition: background-color 0.3s ease-in-out;
 }
 
