@@ -1,10 +1,11 @@
+import { useEffect, useState } from "react";
+
 import CursorBall from "./CursorBall";
-import { useEffect } from "react";
 
 const CursorGroup = ({
   count,
 }) => {
-  let balls;
+  let [balls, setBalls] = useState(null);
 
   const size = 20;
   const speed = 0.2;
@@ -17,45 +18,45 @@ const CursorGroup = ({
     return { x, y };
   }
 
-  const handleMouseMove = (e) => {
-    animateBalls(e);
-  }
-
-  const handleMouseEnter = (e) => {
-    const { x, y } = getPositions(e);
-
-    balls.forEach((ball) => {
-      ball.style.left = `${x}px`;
-      ball.style.top = `${y}px`;
-      ball.style.width = `${size}px`;
-      ball.style.height = `${size}px`;
-      ball.style.opacity = 1;
-    });
-  }
-
-  const handleMouseLeave = () => {
-    balls.forEach((ball) => {
-      ball.style.opacity = 0;
-    });
-  }
-
-  const animateBalls = (e) => {
-    let { x, y } = getPositions(e);
-
-    balls.forEach((ball, index) => {
-      ball.style.left = `${x}px`;
-      ball.style.top = `${y}px`;
-
-      ball.style.scale = (balls.length - index) / balls.length;
-
-      const nextBall = balls[index + 1] || balls[0];
-      x += (nextBall.offsetLeft - x) * speed;
-      y += (nextBall.offsetTop - y) * speed;
-    });
-  }
-
   useEffect(() => {
-    balls = document.querySelectorAll(".cursor-ball");
+    const animateBalls = (e) => {
+      let { x, y } = getPositions(e);
+
+      balls.forEach((ball, index) => {
+        ball.style.left = `${x}px`;
+        ball.style.top = `${y}px`;
+
+        ball.style.scale = (balls.length - index) / balls.length;
+
+        const nextBall = balls[index + 1] || balls[0];
+        x += (nextBall.offsetLeft - x) * speed;
+        y += (nextBall.offsetTop - y) * speed;
+      });
+    }
+
+    const handleMouseMove = (e) => {
+      animateBalls(e);
+    }
+
+    const handleMouseEnter = (e) => {
+      const { x, y } = getPositions(e);
+
+      balls.forEach((ball) => {
+        ball.style.left = `${x}px`;
+        ball.style.top = `${y}px`;
+        ball.style.width = `${size}px`;
+        ball.style.height = `${size}px`;
+        ball.style.opacity = 1;
+      });
+    }
+
+    const handleMouseLeave = () => {
+      balls.forEach((ball) => {
+        ball.style.opacity = 0;
+      });
+    }
+
+    setBalls(document.querySelectorAll(".cursor-ball"));
 
     window.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("mouseenter", handleMouseEnter);
@@ -66,7 +67,7 @@ const CursorGroup = ({
       document.removeEventListener("mouseenter", handleMouseEnter);
       document.removeEventListener("mouseleave", handleMouseLeave);
     }
-  }, [count, handleMouseMove, handleMouseEnter, handleMouseLeave]);
+  }, [count, balls]);
 
   return (
     <div className="cursor-group">

@@ -60,7 +60,7 @@ const NoteList = ({
     }
 
     setFilteredNotes(sorted);
-  }, [sortText, sortFavorite]);
+  }, [sortText, sortFavorite, reverseNotes]);
 
   useEffect(() => {
     const delayTimer = setTimeout(() => {
