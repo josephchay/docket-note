@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 6px;
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(245, 245, 245);
   border-radius: 10px;
   padding: 6px 10px;
 }
@@ -33,6 +33,7 @@
   border: none;
   outline: none;
   font-size: 20px;
+  caret-color: var(--black-color);
 }
 
 .header .search input::placeholder {
@@ -51,5 +52,5 @@
 }
 
 .header .search .star .star-icon {
-  color: rgb(240, 240, 240);
+  color: rgb(245, 245, 245);
 }

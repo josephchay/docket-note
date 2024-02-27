@@ -1,6 +1,6 @@
 # Docket
 
-![image](https://github.com/josephchay/docket-note/assets/136827046/54a39757-caf4-4958-9c2c-a43cc8a821c1)
+![image](https://github.com/josephchay/docket-note/assets/136827046/e6b96caf-627f-4ea5-9e76-bba76a5aa2a4)
 
 ---
 
@@ -13,9 +13,11 @@ Effortlessly organize your notes, set reminders, and access your snippets anytim
 
 # Application Features
 1. **Choice of Themes**: Personalize your note-taking experience with a range of color plate themes to suit your mood and style.
-2. **Tablet Note-Taking**: Seamlessly take down notes on your tablet with a user-friendly interface with emphasis on aesthetics.
-3. **Starred Notes**: Mark your favorite notes with a star to easily access them later.
-4. **Quick Search**: Easily find your notes with a quick search feature that lets you filter through your snippets.
+2. **Random Quote Generation**: Get inspired with a random quote generator that appears every time you create a new note.
+3. **Tablet Note-Taking**: Seamlessly take down notes on your tablet with a user-friendly interface with emphasis on aesthetics.
+4. **Starred Notes**: Mark your favorite notes with a star to easily access them later.
+5. **Quick Search**: Easily find your notes with a quick search feature that lets you filter through your snippets.
+6. **Delete Notes**: Remove notes you no longer need with a simple hold.
 
 # Tech Stack
 1. React
