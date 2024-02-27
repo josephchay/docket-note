@@ -207,7 +207,7 @@ const Note = ({
             }
           }
           readOnly={ note.lock }
-          placeholder={ note.lock ? '' : note.placeholder }
+          placeholder={ note.placeholder }
           defaultValue={ note.text }
           onInput={ (e) => handleTextUpdate(e.target.value, note.id) }
           style={{
