@@ -139,7 +139,7 @@ const NoteList = ({
                     duration: 0.6,
                     type: "spring",
                     stiffness: 180,
-                    delay: 0.5,
+                    delay: 0.2,
                   }}
                 >
                   No notes found
@@ -158,7 +158,7 @@ const NoteList = ({
                     duration: 0.6,
                     type: "spring",
                     stiffness: 180,
-                    delay: 0.6,
+                    delay: 0.3,
                   }}
                 >
                   Click on the
@@ -173,7 +173,7 @@ const NoteList = ({
                       duration: 0.4,
                       type: "spring",
                       stiffness: 300,
-                      delay: 1,
+                      delay: .6,
                     }}
                   >
                     +
