@@ -35,81 +35,81 @@ const Navigation = ({
     navActivator.current.removeAttribute('disabled');
   }
 
-  const open = () => {
-    const tl = anime.timeline();
-
-    disableActivator();
-
-    tl.add({
-      targets: navActivator.current,
-      translateY: [0, -14, 0],
-      scale: [1, .8, 1],
-      rotate: 495,
-      duration: 800,
-      easing: 'easeInOutSine',
-    }).add({
-        targets: '.color-selectors .first',
-        translateY: [0, 80],
-        duration: 3200,
-        scaleY: [1.8, 1],
-      }, '-=400'
-    ).add({
-      targets: '.color-selectors .subsequent',
-      translateY: (el) => {
-        return [el.getAttribute('data-from'), el.getAttribute('data-to')];
-      },
-      scaleY: [0, 1],
-      duration: 1600,
-      opacity: {
-        value: 1,
-        duration: 10,
-      },
-      delay: anime.stagger(240),
-      complete: () => {
-        enableActivator();
-      }
-    }, '-=2600');
-  }
-
-  const close = () => {
-    const tl = anime.timeline();
-
-    disableActivator();
-
-    tl.add({
-      targets: navActivator.current,
-      rotate: 0,
-      duration: 600,
-      easing: 'easeInOutSine',
-    }).add({
-      targets: '.color-selectors .selector',
-      translateY: (el) => {
-        return [el.getAttribute('data-to'), 0];
-      },
-      duration: 400,
-      delay: anime.stagger(80),
-      easing: 'easeInOutSine',
-      complete: () => {
-        enableActivator();
-      }
-    }, '-=400');
-  }
-
-  const interpretToggleMachine = () => {
-    const toggleService = interpret(toggleMachine);
-
-    toggleService.onTransition((state) => {
-      if (state.value === 'active') {
-        open();
-      } else if (state.value === 'inactive') {
-        close();
-      }
-    }).start();
-
-    return toggleService;
-  }
-
   useEffect(() => {
+    const open = () => {
+      const tl = anime.timeline();
+
+      disableActivator();
+
+      tl.add({
+        targets: navActivator.current,
+        translateY: [0, -14, 0],
+        scale: [1, .8, 1],
+        rotate: 316,
+        duration: 800,
+        easing: 'easeInOutSine',
+      }).add({
+          targets: '.color-selectors .first',
+          translateY: [0, 80],
+          duration: 3200,
+          scaleY: [1.8, 1],
+        }, '-=400'
+      ).add({
+        targets: '.color-selectors .subsequent',
+        translateY: (el) => {
+          return [el.getAttribute('data-from'), el.getAttribute('data-to')];
+        },
+        scaleY: [0, 1],
+        duration: 1600,
+        opacity: {
+          value: 1,
+          duration: 10,
+        },
+        delay: anime.stagger(240),
+        complete: () => {
+          enableActivator();
+        }
+      }, '-=2600');
+    }
+
+    const close = () => {
+      const tl = anime.timeline();
+
+      disableActivator();
+
+      tl.add({
+        targets: navActivator.current,
+        rotate: 0,
+        duration: 600,
+        easing: 'easeInOutSine',
+      }).add({
+        targets: '.color-selectors .selector',
+        translateY: (el) => {
+          return [el.getAttribute('data-to'), 0];
+        },
+        duration: 400,
+        delay: anime.stagger(80),
+        easing: 'easeInOutSine',
+        complete: () => {
+          enableActivator();
+        }
+      }, '-=400');
+    }
+
+    const interpretToggleMachine = () => {
+      const toggleService = interpret(toggleMachine);
+
+      toggleService.onTransition((state) => {
+        if (state.value === 'active') {
+          open();
+        } else if (state.value === 'inactive') {
+          close();
+        }
+      }).start();
+
+      return toggleService;
+    }
+
     setToggleService(interpretToggleMachine());
   }, []);
 
