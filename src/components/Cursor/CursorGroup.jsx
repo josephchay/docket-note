@@ -5,7 +5,7 @@ import CursorBall from "./CursorBall";
 const CursorGroup = ({
   count,
 }) => {
-  let [balls, setBalls] = useState(null);
+  let [balls, setBalls] = useState([]);
 
   const size = 20;
   const speed = 0.2;

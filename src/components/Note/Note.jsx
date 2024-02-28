@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 
 import { FaPen, FaStar } from "react-icons/fa6";
 
-import "./Note.css";
 import useLongPress from "../../hooks/useLongPress";
 import { FaEye, FaTrash } from "react-icons/fa";
+
+import "./Note.css";
 
 let debounceTimer = 500, debounceTimeout;
 
